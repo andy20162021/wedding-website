@@ -415,10 +415,20 @@
     </div>
 </section>
 
-<section class="rsvp text-center" id="rsvp">
+<section class="combined-section text-center" id="rsvp">
     <div class="container">
         <div class="row">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUtO0xYJw3Msv-qCr2IAHbGhH5AAwYzyryEcVRByXVvZQ2Mw/viewform?usp=sf_link">RSVP form</a>
+            <div class="col-md-6">
+                <!-- RSVP form -->
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUtO0xYJw3Msv-qCr2IAHbGhH5AAwYzyryEcVRByXVvZQ2Mw/viewform?usp=sf_link">RSVP form</a>
+            </div>
+            <div class="col-md-6">
+                <!-- Button and Calendar section -->
+                <button id="add-to-calendar-btn">Add to Calendar</button>
+                    <div id="calendar-section">
+                    <!-- Calendar will be added here when the button is clicked -->
+                    </div>
+            </div>
         </div>
     </div>
 </section>
@@ -444,6 +454,30 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
 <!-- Google Analytics -->
+<script>
+    // Add a click event listener to the button
+    $('#add-to-calendar-btn').on('click', function() {
+        // Call the function to generate the calendar
+        var myCalendar = createCalendar({
+            options: {
+                class: '',
+                id: ''
+            },
+            data: {
+                title: "Kelsey and Bo's Wedding",
+                start: new Date('Jun 02, 2024 14:00'),
+                end: new Date('Jun 02, 2024 21:00'),
+                address: 'One Seascape Resort Drive, Aptos, CA 95003',
+                description: "We can't wait to see you on our big day. For any queries or issues, please Bo Li at +1 6508230889."
+            }
+        });
+
+        // Add the calendar to the specified section
+        $('#calendar-section').html(myCalendar);
+    });
+</script>
+
+
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
