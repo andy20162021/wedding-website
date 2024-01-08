@@ -34,6 +34,12 @@
         }
     </style>
     <style>
+    .carousel-img {
+    height: 200px; /* Adjust the height as needed */
+    object-fit: cover; /* Maintain aspect ratio and cover the specified height */
+    }
+    </style>
+    <style>
         /* Custom styles for the unordered list */
         ul {
           list-style-type: circle !important; /* You can change this to disc, circle, etc. */
@@ -182,7 +188,7 @@
 </section>
 
 
-<section class="events section-padding" id="events" style="background-color: #ADD8E6;">
+<section class="events section-padding" id="events" style="background-color: #E8F4FF;">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -205,6 +211,10 @@
                     <h5>Ceremony <span class="time">3PM - 4PM</span></h5>
                     <p>The ceremony will start at 3PM at the island of Seascape Resort. The dress code is semi-formal or dressy casual attire. Any pastel colors are fine. For some inspirations see <a href="dc.html" style="color: red;">here</a></p>.
                 </div>
+                <div class="col-md-6" id="rsvp">
+                <!-- RSVP form -->
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUtO0xYJw3Msv-qCr2IAHbGhH5AAwYzyryEcVRByXVvZQ2Mw/viewform?usp=sf_link"><span style="font-size: 20px; color: #8B4513;">RSVP form</span></a>
+                </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
                 <div class="wp4" style="visibility: visible;">
@@ -218,6 +228,12 @@
                 <div class="wp6" style="visibility: visible;">
                     <h5>Afterparty <span class="time">7PM-9PM</span></h5>
                     <p>Drink, dance, play!</p>
+                </div>
+                <div class="col-md-6">
+                <!-- Button and Calendar section -->
+                    <div id="calendar-section">
+                    <!-- Calendar will be added here when the button is clicked -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -234,7 +250,7 @@
 
 </section>
 
-<section id="Story_of_us" style="background-color: #FFC0CB;">
+<section id="Story_of_us" style="background-color: #FDDCE2;">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -247,16 +263,16 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="img/daily_photo/01.JPG" alt="Slide 1">
+                            <img src="img/daily_photo/01.JPG" alt="Slide 1" class="carousel-img">
                         </div>
                         <div class="item">
-                            <img src="img/daily_photo/02.JPG" alt="Slide 2">
+                            <img src="img/daily_photo/02.JPG" alt="Slide 2" class="carousel-img">
                         </div>
                         <div class="item">
-                            <img src="img/daily_photo/03.JPG" alt="Slide 3">
+                            <img src="img/daily_photo/03.JPG" alt="Slide 3" class="carousel-img">
                         </div>
                         <div class="item">
-                            <img src="img/daily_photo/04.JPG" alt="Slide 4">
+                            <img src="img/daily_photo/04.JPG" alt="Slide 4" class="carousel-img">
                         </div>
                         <!-- Add more slides as needed -->
                     </div>
@@ -271,9 +287,11 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-9 tangerine">
+            <div class="col-md-9">
                 <p>
-                    We first crossed paths in Berkeley and officially became a couple on May 19, 2021. Since then, every day has been filled with sweetness. Our mornings commence with Bo showering Kelsey with affectionate kisses. Throughout the day, we exchange heartfelt text messages expressing our love. Each night, we embrace each other in a comforting hug before drifting off to sleep. In our leisure time, we enjoy strolling through the city, listening to music, and discovering new dining experiences. Kelsey finds joy in hand-crafting, drama-watching, and posing for photos taken by Bo. Meanwhile, Bo's interests include reading, soccer-watching, and engaging Kelsey in a myriad of intriguing conversations.
+                    We first crossed paths in Berkeley and officially became a couple on May 19, 2021. Since then, every day has been filled with sweetness. Our mornings commence with Bo showering Xizi with affectionate kisses. Throughout the day, we exchange heartfelt text messages expressing our love. The evening unfolds with shared moments over dinner, accompanied by the comforting glow of reality shows and dramas. In these ordinary yet extraordinary moments, we find joy in the simple act of being together, reveling in the shared laughter and quiet understanding. Each night, we embrace each other in a comforting hug before drifting off to sleep.
+                    <br>
+                    In our leisure time, we enjoy strolling through the city, listening to music, and discovering new dining experiences. Xizi finds joy in hand-crafting, drama-watching, and posing for photos taken by Bo. Meanwhile, Bo's interests include reading, soccer-watching, and engaging Xizi in a myriad of intriguing conversations. In our life together, Bo learns to be more organized in life and the difference between Xiaotong Guan and Xiaotong Mao; Xizi delves into the fascinating realms of history and the difference of FP32/BF16. Yet, amidst these unique pursuits, what truly binds us together is the shared joy we find in each other's company, creating a harmonious melody of laughter and love that transcends the differences we embrace.
                     <br>
                     We've savored the taste of wine amid the autumnal charm of Napa, reclined on the winter beaches of Hawaii, admired blooming flowers in the springtime of Half Moon Bay, and engaged in summer kayaking adventures in Tahoe. From witnessing the midnight sun in Alaska at 11 PM to the shared challenge of spending two hours extricating our car from the winter snow in Tahoe, we've experienced a diverse range of moments. Anticipating the journey ahead, we eagerly look forward to creating more cherished scenes together in our shared life.
                 </p>
@@ -290,7 +308,7 @@
 
 
 
-<section id="eng-pics" class="section-padding" style="background-color: #ADD8E6;">
+<section id="eng-pics" class="section-padding" style="background-color: #E8F4FF">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -380,7 +398,7 @@
     </div>-->
 </section>
 
-<section class="events section-padding" id="things-to-do" style="background-color: #FFC0CB;">
+<section class="events section-padding" id="things-to-do" style="background-color: #FDDCE2;">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -406,6 +424,8 @@
                     <ul class="display">
                     <li>Lake Tahoe is a great place to visit in the summer. You cannot miss the clear Kayak there.</li>
                     <li>Filoli is one of the best places we have found to take photos.</li>
+                    <li>Napa Valley is a beautiful place to visit even if you are not a drinker.</li>
+                    <li>City Lights Bookstore is Bo's hidden-gem in the city.</li>
                     <li>山城辣妹子 is our favorite hotpot place and Boiling Beijing is always our goto for authentic Chinese food.</li>
                     </ul>
             </div>
@@ -413,25 +433,9 @@
     </div>
 </section>
 
-<section class="combined-section text-center" id="rsvp" style="background-color: #ADD8E6;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <!-- RSVP form -->
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUtO0xYJw3Msv-qCr2IAHbGhH5AAwYzyryEcVRByXVvZQ2Mw/viewform?usp=sf_link"><span style="font-size: 20px; color: #8B4513;">RSVP form</span></a>
-            </div>
-            <div class="col-md-6">
-                <!-- Button and Calendar section -->
-                    <div id="calendar-section">
-                    <!-- Calendar will be added here when the button is clicked -->
-                    </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
-<section class="events section-padding" id="faq" style="background-color: #FFC0CB;">
+<section class="events section-padding" id="faq" style="background-color: #E8F4FF;">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
