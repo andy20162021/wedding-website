@@ -24,6 +24,16 @@
     <link rel="manifest" href="manifest.json">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
     <style>
+        .image-container {
+            display: flex;
+            justify-content: center; /* Optional: Center the images */
+        }
+
+        .thumbnail {
+            margin: 5px; /* Adjust margin as needed */
+        }
+    </style>
+    <style>
         /* Custom styles for the unordered list */
         ul {
           list-style-type: circle !important; /* You can change this to disc, circle, etc. */
@@ -35,6 +45,29 @@
         li {
           margin-left: 5px;
           list-style-type: circle !important;
+        }
+    </style>
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .faq-answer {
+            color: #666;
         }
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -64,7 +97,7 @@
         }
     </script>
     <!-- TEST FONT -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Rubik+Maps&family=WindSong&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Rubik+Maps&family=WindSong&family=Marck+Script&family=Tangerine&display=swap">
     <style>
         body {
             font-family: 'Test', sans-serif; /* Default font for the entire body */
@@ -76,6 +109,23 @@
         .dancing-scripts {
             font-family: 'Dancing Script';
             text-transform: none; sans-serif; /* Apply 'Rubik Maps' to elements with this class */
+        }
+        .marck-scripts {
+            font-family: 'Marck Script';
+            text-transform: none; sans-serif; /* Apply 'Rubik Maps' to elements with this class */
+        }
+        .tangerine {
+            font-family: 'Tangerine';
+            text-transform: none; sans-serif; /* Apply 'Rubik Maps' to elements with this class */
+        }
+        .windsong {
+            font-family: 'WindSong';
+            text-transform: none; sans-serif; /* Apply 'Rubik Maps' to elements with this class */
+        }
+    </style>
+    <style>
+        .hidden-section {
+            display: none;
         }
     </style>
     <!-- TEST DONE -->
@@ -104,7 +154,8 @@
                             <li><a href="#events">Events</a></li>
                             <li><a href="#Story_of_us">Story of us</a></li>
                             <li><a href="#eng-pics">Engagement</a></li>
-                            <li><a href="#things-to-do">Things to do
+                            <li><a href="#things-to-do">Things to do</a></li>
+                            <li><a href="#faq">FAQ</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -131,10 +182,10 @@
 </section>
 
 
-<section class="events section-padding" id="events">
+<section class="events section-padding" id="events" style="background-color: #ADD8E6;">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 text-center">
                 <h3 class="header dancing-scripts" style="font-size: 36px">Events</h3>
             </div>
         </div>
@@ -148,21 +199,21 @@
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
                 <div class="wp3" style="visibility: visible;">
                     <h5>Check-in <span class="time">2:30PM - 3PM</span></h5>
-                    <p>Please check-in at xxx.</p>
+                    <p>There will be people at the parking lot and hotel lobby to guide you to the registration place. We recommend you arriving early to allow yourself sometime to check-in and grab gifts to go :) </p>
                 </div>
                 <div class="wp5" style="visibility: visible;">
                     <h5>Ceremony <span class="time">3PM - 4PM</span></h5>
-                    <p>The ceremony will happen at yyy.</p>
+                    <p>The ceremony will start at 3PM at the island of Seascape Resort. The dress code is semi-formal or dressy casual attire. Any pastel colors are fine. For some inspirations see <a href="dc.html" style="color: red;">here</a></p>.
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
                 <div class="wp4" style="visibility: visible;">
                     <h5>Cocktail Hour <span class="time">4PM-5PM</span></h5>
-                    <p>We will also hold garden games. Feel free to play games, chat with friends, or just enjoy some snacks :)</p>
+                    <p>We will also hold garden games. Feel free to play games, chat with friends, or just enjoy some snacks/bobas :)</p>
                 </div>
                 <div class="wp6" style="visibility: visible;">
                     <h5>Reception <span class="time">5PM-7PM</span></h5>
-                    <p>Placeholder.</p>
+                    <p>A buffet style reception will be served in-house.</p>
                 </div>
                 <div class="wp6" style="visibility: visible;">
                     <h5>Afterparty <span class="time">7PM-9PM</span></h5>
@@ -170,83 +221,16 @@
                 </div>
             </div>
         </div>
-        <div class="row section-padding">
-            <div class="col-md-6 text-center">
-                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
-                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
-                </a>
-            </div>
-            <div class="col-md-6 text-center">
-                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#faq-modal">
-                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;FAQ
-                </a>
-            </div>
-        </div>
+
+
         <!--<div class="row">
             <div class="col-xs-12 section-border section-padding">
             </div>
         </div>-->
     </div>
 
-    <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                    </button>
-                    <h3 class="text-center section-padding">Ugh... dress codes?</h3>
-                    <h5>Mehndi <span class="time">1PM - 5PM</span></h5>
-                    <p>
-                        <strong>Ethnic indian wear</strong>
-                        <br>
-                        Ladies can wear something
-                        <a href="https://www.pinterest.com/ramswarooppatra/mehndi-dress-for-women/">bright & vivid</a>
-                        and gentlemen can be on
-                        their <a href="https://www.pinterest.com/ramswarooppatra/mehndi-dress-for-men/">vibrant
-                        kurtas</a> with pants or pyjamas along with an optional shawl.
-                    </p>
-                    <h5>Cocktail Night <span class="time">7PM - 12AM</span></h5>
-                    <p>
-                        <strong>Western attire</strong>
-                        <br>
-                        A semi-formal look that is contemporary & fashionable which is not too prim & proper is the best
-                        to pull off this night. You can see some pins for
-                        <a href="https://www.pinterest.com/ramswarooppatra/cocktail-night-outfit-for-women/">ladies</a>
-                        & <a href="https://www.pinterest.com/ramswarooppatra/cocktail-night-outfit-for-men/">gents</a>.
-                    </p>
-                    <h5>Wedding <span class="time">6PM-12AM</span></h5>
-                    <p>
-                        <strong>Indo-western</strong>
-                        <br>
-                        Ladies can flaunt their unconventional sarees,
-                        <a href="https://www.pinterest.com/ramswarooppatra/indo-western-lehengas/">lehengas</a>,
-                        <a href="https://www.pinterest.com/ramswarooppatra/indo-western-anarkalis/">anarkalis</a>,
-                        dresses and the list
-                        goes on whereas gentlemen can wear any kind of suit or just blazer. If you don't like to wear a
-                        suit/blazer, you can do a <a
-                            href="https://www.pinterest.com/ramswarooppatra/high-neck-jackets-for-men/">high-neck
-                        (band gala) waistcoat & shirt</a> combo.
-                    </p>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div>
 
-    <div id="faq-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                    </button>
-                    <h3 class="text-center section-padding">FAQ</h3>
-                    Q: Is there free parking at the spot?<br><span style="color: blue;">A: Yep!</span><br>
-                    Q: May I bring my plus-one?<br><span style="color: blue;">A: Of course! Just make sure to note that in the RSVP form below :)</span><br>
-                    Q: May I bring my children?<br><span style="color: blue;">A: We kindly ask you not to bring children due to limited resources to take care of them :)</span><br>
-                    Q: Shall I bring "fenziqian" or gift?<br><span style="color: blue;">A: Definitely no "fenziqian". We would also kindly ask you to refrain from expansive gifts</span>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+
 
 </section>
 
@@ -287,7 +271,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9 tangerine">
                 <p>
                     We first crossed paths in Berkeley and officially became a couple on May 19, 2021. Since then, every day has been filled with sweetness. Our mornings commence with Bo showering Kelsey with affectionate kisses. Throughout the day, we exchange heartfelt text messages expressing our love. Each night, we embrace each other in a comforting hug before drifting off to sleep. In our leisure time, we enjoy strolling through the city, listening to music, and discovering new dining experiences. Kelsey finds joy in hand-crafting, drama-watching, and posing for photos taken by Bo. Meanwhile, Bo's interests include reading, soccer-watching, and engaging Kelsey in a myriad of intriguing conversations.
                     <br>
@@ -306,7 +290,7 @@
 
 
 
-<section id="eng-pics" class="section-padding">
+<section id="eng-pics" class="section-padding" style="background-color: #ADD8E6;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -315,7 +299,7 @@
         </div>
         <div class="row">
             <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/9-17/vertical/DSC08441.jpg">
+                <a class="fancybox" rel="group" href="img/9-17/vertical/01.jpg">
                     <div class="img-wrap">
                         <div class="overlay">
                             <i class="fa fa-search"></i>
@@ -325,7 +309,7 @@
                 </a>
             </div>
             <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/9-17/vertical/DSC08441.jpg">
+                <a class="fancybox" rel="group" href="img/9-17/vertical/02.jpg">
                     <div class="img-wrap">
                         <div class="overlay">
                             <i class="fa fa-search"></i>
@@ -335,7 +319,7 @@
                 </a>
             </div>
             <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/9-17/vertical/DSC08441.jpg">
+                <a class="fancybox" rel="group" href="img/9-17/vertical/03.jpg">
                     <div class="img-wrap">
                         <div class="overlay">
                             <i class="fa fa-search"></i>
@@ -345,7 +329,7 @@
                 </a>
             </div>
             <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/9-17/vertical/DSC08441.jpg">
+                <a class="fancybox" rel="group" href="img/9-17/vertical/04.jpg">
                     <div class="img-wrap">
                         <div class="overlay">
                             <i class="fa fa-search"></i>
@@ -355,7 +339,7 @@
                 </a>
             </div>
             <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/9-17/vertical/DSC08441.jpg">
+                <a class="fancybox" rel="group" href="img/9-17/vertical/05.jpg">
                     <div class="img-wrap">
                         <div class="overlay">
                             <i class="fa fa-search"></i>
@@ -365,7 +349,7 @@
                 </a>
             </div>
             <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/9-17/vertical/DSC08441.jpg">
+                <a class="fancybox" rel="group" href="img/9-17/vertical/06.jpg">
                     <div class="img-wrap">
                         <div class="overlay">
                             <i class="fa fa-search"></i>
@@ -396,11 +380,11 @@
     </div>-->
 </section>
 
-<section class="events section-padding" id="things-to-do">
+<section class="events section-padding" id="things-to-do" style="background-color: #FFC0CB;">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h3 class="header dancing-scripts" style="font-size: 36px">What to enjoy</h3>
+            <div class="col-md-12 text-center">
+                <h3 class="header dancing-scripts" style="font-size: 36px">Things to do</h3>
             </div>
         </div>
         <div class="row">
@@ -422,19 +406,19 @@
                     <ul class="display">
                     <li>Lake Tahoe is a great place to visit in the summer. You cannot miss the clear Kayak there.</li>
                     <li>Filoli is one of the best places we have found to take photos.</li>
-                    <li>山城辣妹子 is our favorite hotpot place.</li>
+                    <li>山城辣妹子 is our favorite hotpot place and Boiling Beijing is always our goto for authentic Chinese food.</li>
                     </ul>
             </div>
         </div>
     </div>
 </section>
 
-<section class="combined-section text-center" id="rsvp">
+<section class="combined-section text-center" id="rsvp" style="background-color: #ADD8E6;">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <!-- RSVP form -->
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUtO0xYJw3Msv-qCr2IAHbGhH5AAwYzyryEcVRByXVvZQ2Mw/viewform?usp=sf_link"><span style="font-size: 20px;">RSVP form</span></a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUtO0xYJw3Msv-qCr2IAHbGhH5AAwYzyryEcVRByXVvZQ2Mw/viewform?usp=sf_link"><span style="font-size: 20px; color: #8B4513;">RSVP form</span></a>
             </div>
             <div class="col-md-6">
                 <!-- Button and Calendar section -->
@@ -445,6 +429,47 @@
         </div>
     </div>
 </section>
+
+
+<section class="events section-padding" id="faq" style="background-color: #FFC0CB;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="header dancing-scripts" style="font-size: 36px">FAQ</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3 class="faq-question">Is there free parking at the spot?</h3>
+                    <p class="faq-answer">Yes!</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">May I bring my plus one?</h3>
+                    <p class="faq-answer">Of course! Just make sure to register that in the RSVP form</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">May I bring my children?</h3>
+                    <p class="faq-answer">We kindly ask you not to bring your children due to limited resources to take care of them</p>
+                </div>
+
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Shall I bring "fenziqian" or gift?</h3>
+                    <p class="faq-answer">Your generosity is genuinely appreciated, but please know that your presence and well wishes are the most cherished gifts we could receive. Should you wish to contribute, a token donation towards our honeymoon would be graciously accepted (with a suggested limit of $100), although your participation in our celebration is truly all that we desire. We kindly request that you refrain from extravagant gifts, as your warm thoughts are more than enough.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more FAQ items as needed -->
+
+    </div>
+        </div>
+    </div>
+</section>
+
 
 <footer>
     <div class="container">
@@ -476,7 +501,7 @@
                 id: ''
             },
             data: {
-                title: "Kelsey and Bo's Wedding",
+                title: "Xizi and Bo's Wedding",
                 start: new Date('Jun 02, 2024 14:00'),
                 end: new Date('Jun 02, 2024 21:00'),
                 address: 'One Seascape Resort Drive, Aptos, CA 95003',
@@ -488,6 +513,7 @@
         $('#calendar-section').html(myCalendar);
         // $('#add-to-calendar-btn').hide();
 </script>
+
 
 
 <script>
